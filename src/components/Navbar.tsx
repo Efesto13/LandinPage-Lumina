@@ -30,13 +30,6 @@ export default function Navbar() {
             <li key={link.name}>
               <Link
                 href={link.href}
-                onClick={(e: any) => {
-                  if (link.href === "#contact") {
-                    e.preventDefault();
-                    const el = document.getElementById("contact");
-                    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-                  }
-                }}
                 className="relative px-4 py-2 block text-gray-400 hover:text-white transition-colors duration-300 rounded-lg"
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
