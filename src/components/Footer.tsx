@@ -24,7 +24,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="w-full bg-[#030014] border-t border-purple-500/10 relative z-20 overflow-hidden">
+    <footer id="contact" className="w-full bg-[#030014] border-t border-purple-500/10 relative z-20 overflow-hidden">
       {/* Glow de fondo sutil en las esquinas */}
       <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-[radial-gradient(circle_at_center,rgba(139,92,246,0.03),transparent_70%)] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-[radial-gradient(circle_at_center,rgba(201,41,185,0.03),transparent_70%)] pointer-events-none" />
