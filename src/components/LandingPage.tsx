@@ -4,6 +4,7 @@ import Playground from "./Playground"; // Ajusta la ruta de importación si es n
 import { motion, useMotionValue, useTransform, Variants } from "framer-motion";
 import { MouseEvent } from "react";
 import { Sparkles, CodeXml, Eye, FolderArchive, Hand, Send } from "lucide-react";
+import Link from "next/link";
 import Footer from "./Footer";
 
 interface CardProps {
@@ -47,6 +48,8 @@ function SpotlightCard({ index, icon, title, description, className = "" , direc
       transition: { type: "spring", stiffness: 50, damping: 15 }
     }
   };
+
+ 
 
   return (
     <motion.div
@@ -170,6 +173,7 @@ function Pricing() {
 
 // --- 3. FINAL CTA COMPONENT (WITH ADVANCED MOUSE-REACTION & SCROLL GLOW) ---
 function FinalCTA() {
+   const url = process.env.NEXT_PUBLIC_URL_LUMINA_REGISTER as string
   return (
     <section className="w-full max-w-5xl mx-auto px-6 py-32 text-center relative z-20 bg-[#030014]">
       {/* Destello de fondo animado que parpadea y crece suavemente */}
@@ -205,7 +209,9 @@ function FinalCTA() {
           transition={{ type: "spring", stiffness: 400, damping: 15 }}
           className="mt-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-bold px-8 py-3.5 rounded-xl text-sm transition-all shadow-xl shadow-purple-500/10"
         >
-          Create Free Account
+          <Link href={url}>
+             Create Free Account
+          </Link>
         </motion.button>
       </motion.div>
     </section>

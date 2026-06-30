@@ -12,6 +12,7 @@ export default function Navbar() {
     { name: "Prices", href: "#prices" },
     { name: "Contact", href: "#contact" }
   ];
+  const url = process.env.NEXT_PUBLIC_URL_LUMINA as string
 
   return (
     <header className="relative z-30 w-full max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
@@ -59,7 +60,7 @@ export default function Navbar() {
       {/* Botón de Acción */}
       <div>
         <Link 
-          href="#signup" 
+          href={url} 
           className="bg-[#c929b9] text-white px-5 py-2.5 rounded-xl font-semibold text-sm hover:bg-[#b01f9f] transition-all shadow-lg shadow-pink-500/20"
         >
           Start
